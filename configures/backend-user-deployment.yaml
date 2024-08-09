@@ -13,36 +13,22 @@ spec:
         run: backend-user
     spec:
       containers:
-      - image: tuandung1698/udagram-api-user:v4
-        name: backend-user
+      - image: tuandung1698/udagram-api-user
+        name: backend-user 
+        imagePullPolicy: Always  
         resources:
           requests:
             memory: "64Mi"
             cpu: "250m"
           limits:
-            memory: "1024Mi"
-            cpu: "500m"
+            memory: "2042Mi"
+            cpu: "500m"      
         env:
         - name: URL
           valueFrom:
             configMapKeyRef:
               name: env-config
-              key: URL
-        - name: AWS_BUCKET
-          valueFrom:
-            configMapKeyRef:
-              name: env-config
-              key: AWS_BUCKET
-        - name: AWS_PROFILE
-          valueFrom:
-            configMapKeyRef:
-              name: env-config
-              key: AWS_PROFILE
-        - name: AWS_REGION
-          valueFrom:
-            configMapKeyRef:
-              name: env-config
-              key: AWS_REGION
+              key: URL 
         - name: JWT_SECRET
           valueFrom:
             configMapKeyRef:
@@ -68,12 +54,6 @@ spec:
             secretKeyRef:
               name: env-secret
               key: POSTGRES_USERNAME
-        volumeMounts:
-        - name: aws-secret
-          mountPath: "/root/.aws/"
-          readOnly: true
       restartPolicy: Always
-      volumes:
-      - name: aws-secret
-        secret:
-          secretName: aws-secret
+
+
