@@ -13,7 +13,7 @@ spec:
         run: backend-feed
     spec:
       containers:
-      - image: tuandung1698/udagram-api-feed
+      - image: tuandung1698/udagram-api-feed:v4
         name: backend-feed
         resources:
           requests:
