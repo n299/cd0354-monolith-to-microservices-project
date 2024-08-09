@@ -13,7 +13,7 @@ spec:
         run: backend-user
     spec:
       containers:
-      - image: tuandung1698/udagram-api-user
+      - image: tuandung1698/udagram-api-user:v4
         name: backend-user
         resources:
           requests:
