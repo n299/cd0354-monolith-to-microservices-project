@@ -15,7 +15,7 @@ spec:
         service: backend-feed
     spec:
       containers:
-      - image: tuandung1698/udagram-api-feed:v12
+      - image: tuandung1698/udagram-api-feed:v14
         name: backend-feed
         imagePullPolicy: Always
         resources:
@@ -24,7 +24,7 @@ spec:
             cpu: "250m"
           limits:
             memory: "2042Mi"
-            cpu: "500m"                  
+            cpu: "500m"
         env:
         - name: URL
           valueFrom:
