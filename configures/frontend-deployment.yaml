@@ -13,7 +13,7 @@ spec:
         run: frontend
     spec:
       containers:
-      - image: tuandung1698/udagram-frontend:v10
+      - image: tuandung1698/udagram-frontend:v11
         name: frontend
         imagePullPolicy: Always
         ports:

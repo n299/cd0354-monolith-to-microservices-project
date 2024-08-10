@@ -1,21 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  labels:
+    service: backend-feed
   name: backend-feed
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      run: backend-feed
+      service: backend-feed
   template:
     metadata:
       labels:
-        run: backend-feed
+        service: backend-feed
     spec:
       containers:
-      - image: tuandung1698/udagram-api-feed
+      - image: tuandung1698/udagram-api-feed:v11
         name: backend-feed
-        imagePullPolicy: Always  
+        imagePullPolicy: Always
         resources:
           requests:
             memory: "64Mi"
@@ -77,4 +79,4 @@ spec:
       volumes:
       - name: aws-secret
         secret:
-          secretName: aws-secret       
+          secretName: aws-secret
