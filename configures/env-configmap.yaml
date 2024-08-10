@@ -7,7 +7,7 @@ data:
   POSTGRES_PASSWORD: Anhtuyen12
   POSTGRES_HOST: cdr1.cr2pckdxu1mq.us-east-1.rds.amazonaws.com
   POSTGRES_DB: postgres
-  AWS_BUCKET: arn:aws:s3:::test-787519046322-dev
+  AWS_BUCKET: test-787519046322-dev
   AWS_REGION: us-east-1
   AWS_PROFILE: default
   JWT_SECRET: helloworld
