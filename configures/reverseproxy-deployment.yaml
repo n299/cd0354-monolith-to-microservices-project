@@ -13,7 +13,7 @@ spec:
         run: reverseproxy
     spec:
       containers:
-      - image: tuandung1698/udagram-reverseproxy:v11
+      - image: tuandung1698/udagram-reverseproxy:v12
         name: reverseproxy
         imagePullPolicy: Always          
         resources:

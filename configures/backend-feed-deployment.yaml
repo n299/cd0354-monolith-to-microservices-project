@@ -15,7 +15,7 @@ spec:
         service: backend-feed
     spec:
       containers:
-      - image: tuandung1698/udagram-api-feed:v11
+      - image: tuandung1698/udagram-api-feed:v12
         name: backend-feed
         imagePullPolicy: Always
         resources:
